@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Қол Қимылымен Сөйлем Құрау</title>
+    <link rel="stylesheet" href="./styles.css?v=20260422-0036" />
+  </head>
+  <body>
+    <div id="featureOneScreen" class="feature-screen active">
+      <div class="page-shell">
+        <header class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Ағылшын Тіліне Арналған Жаттығу</p>
+            <h1>Сөйлемді қол қимылымен құрастыр</h1>
+            <p class="hero-text">
+              Камераны қосыңыз, саусақтарыңызды жақындатып сөзді ұстаңыз және
+              керекті орынға апарыңыз. Әр суретте бір әрекет берілген, ал сіз
+              араласқан сөздерден дұрыс ағылшын сөйлемін құрастырасыз.
+            </p>
+            <div class="hero-actions">
+              <button id="cameraButton" class="primary-button">
+                Камераны Қосу
+              </button>
+              <button id="restartButton" class="secondary-button">
+                Қайта Бастау
+              </button>
+            </div>
+            <div class="hero-status">
+              <span id="cameraStatus" class="status-pill status-idle">
+                Камера өшірулі
+              </span>
+              <span id="gestureStatus" class="status-pill status-muted">
+                Қимылды тану камера қосылғанда іске қосылады
+              </span>
+            </div>
+          </div>
+          <aside class="camera-panel">
+            <div class="camera-frame">
+              <video id="cameraVideo" autoplay playsinline muted></video>
+              <canvas id="cameraCanvas"></canvas>
+            </div>
+            <p class="camera-hint">
+              Сөзді ұстау үшін бас бармақ пен сұқ саусақты жақындатыңыз, сосын
+              керек ұяшықтың үстінде босатыңыз.
+            </p>
+          </aside>
+        </header>
+
+        <main class="game-layout">
+          <section class="game-panel">
+            <div class="panel-topbar">
+              <div>
+                <p class="panel-label">Тапсырма</p>
+                <h2 id="taskTitle">1 / 10</h2>
+              </div>
+              <div class="stats-row">
+                <div class="stat-card">
+                  <span class="stat-label">Ұпай</span>
+                  <strong id="scoreValue">0</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Орындалды</span>
+                  <strong id="progressValue">0/10</strong>
+                </div>
+              </div>
+            </div>
+
+            <article class="task-card">
+              <div class="task-image-wrap">
+                <div id="taskImage" class="task-image"></div>
+                <div class="task-badge">
+                  <span id="taskIndexBadge">01</span>
+                </div>
+              </div>
+
+              <div class="task-content">
+                <div class="instruction-box">
+                  <p class="instruction-label">Нұсқаулық</p>
+                  <p id="taskInstruction" class="instruction-text">
+                    Араласқан сөздерді дұрыс ретпен орналастырыңыз.
+                  </p>
+                </div>
+
+                <div class="sentence-area">
+                  <p class="section-label">Сөйлем ұяшықтары</p>
+                  <div id="sentenceSlots" class="slots-grid"></div>
+                </div>
+
+                <div class="word-bank-area">
+                  <div class="word-bank-header">
+                    <p class="section-label">Аралас сөздер</p>
+                    <button id="shuffleButton" class="ghost-button">
+                      Қайта Араластыру
+                    </button>
+                  </div>
+                  <div id="wordBank" class="word-bank"></div>
+                </div>
+
+                <div class="task-feedback">
+                  <p id="feedbackText" class="feedback-text">
+                    Әр сөзді дұрыс орынға апарыңыз.
+                  </p>
+                </div>
+              </div>
+              <div id="celebrationLayer" class="celebration-layer" aria-hidden="true"></div>
+            </article>
+
+            <div class="navigation-row">
+              <button id="prevButton" class="secondary-button">Артқа</button>
+              <button id="checkButton" class="primary-button">Тексеру</button>
+              <button id="nextButton" class="secondary-button">Келесі</button>
+            </div>
+
+            <div class="feature-switch-row">
+              <button id="openSpeechFeatureButton" class="feature-switch-button" type="button">
+                Келесі бөлім: Дауыспен сөйлеу
+              </button>
+            </div>
+          </section>
+
+          <section class="task-list-panel">
+            <div class="panel-heading">
+              <p class="panel-label">Барлық тапсырмалар</p>
+              <h3>Қол қимылымен орындалатын 10 тапсырма</h3>
+            </div>
+            <div id="taskList" class="task-list"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div id="featureTwoScreen" class="feature-screen">
+      <div class="page-shell">
+        <header class="hero hero-voice">
+          <div class="hero-copy">
+            <p class="eyebrow">Дауыстық тапсырма</p>
+            <h1 class="voice-task-title">ДАУЫСТЫҚ ТАПСЫРМА</h1>
+            <p class="hero-text">
+              Бұл бөлім бірінші тапсырмадан толық бөлек жұмыс істейді. Оқушы
+              суретке қарап ағылшынша толық сөйлем айтады, ал жүйе мағынаны
+              тексеріп, дәл сөзбе-сөз бірдей болуын талап етпейді.
+            </p>
+            <div class="hero-actions">
+              <button id="backToFeatureOneButton" class="secondary-button" type="button">
+                Бірінші бөлімге оралу
+              </button>
+              <button id="speechListenButton" class="primary-button" type="button">
+                Сөйлеуді Бастау
+              </button>
+              <button id="speechCheckButton" class="ghost-button" type="button">
+                Жауапты Тексеру
+              </button>
+            </div>
+            <div class="hero-status">
+              <span id="speechSupportStatus" class="status-pill status-muted">
+                Микрофон арқылы жауап беруге болады
+              </span>
+              <span id="speechLiveStatus" class="status-pill status-idle">
+                Әзірше тыңдап тұрған жоқ
+              </span>
+            </div>
+          </div>
+          <aside class="camera-panel speech-side-panel">
+            <div class="speech-side-card">
+              <p class="panel-label">Тақырып</p>
+              <h3>Суретке қарап, ағылшынша сөйлеңіз</h3>
+              <p class="camera-hint">
+                Мұнда жаңа 7 сурет берілген. Оқушы суретке қарап ағылшынша
+                сөйлем айтады, мысалы: “The boy is playing football.”
+                Жүйе негізгі мағынаны тануға тырысады.
+              </p>
+              <button id="speechHintButton" class="secondary-button" type="button">
+                Үлгі Сөйлемді Көру
+              </button>
+              <p id="speechModelText" class="speech-model-text hidden"></p>
+            </div>
+          </aside>
+        </header>
+
+        <main class="game-layout speech-layout">
+          <section class="game-panel">
+            <div class="panel-topbar">
+              <div>
+                <p class="panel-label">Дауыстық тапсырма</p>
+                <h2 id="speechTaskTitle">1 / 7</h2>
+              </div>
+              <div class="stats-row">
+                <div class="stat-card">
+                  <span class="stat-label">Ұпай</span>
+                  <strong id="speechScoreValue">0</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Орындалды</span>
+                  <strong id="speechProgressValue">0/7</strong>
+                </div>
+              </div>
+            </div>
+
+            <article class="task-card speech-task-card">
+              <div class="task-image-wrap">
+                <div id="speechTaskImage" class="task-image"></div>
+                <div class="task-badge">
+                  <span id="speechTaskIndexBadge">01</span>
+                </div>
+              </div>
+
+              <div class="task-content">
+                <div class="instruction-box">
+                  <p class="instruction-label">Нұсқаулық</p>
+                  <p id="speechTaskInstruction" class="instruction-text">
+                    Суретке қарап, толық ағылшын сөйлем айтыңыз.
+                  </p>
+                </div>
+
+                <div class="speech-transcript-area">
+                  <p class="section-label">Естілген Сөйлем</p>
+                  <textarea
+                    id="speechTranscript"
+                    class="speech-transcript"
+                    placeholder="Мұнда сіздің айтқан сөйлеміңіз пайда болады..."
+                  ></textarea>
+                  <p id="speechTranscriptStatus" class="speech-transcript-status">
+                    Микрофон батырмасын басып, сурет бойынша сөйлем айтыңыз.
+                  </p>
+                  <p id="speechManualFallback" class="manual-fallback-note hidden">
+                    Егер микрофон бұл браузерде іске қосылмаса, сөйлемді осы
+                    өріске қолмен жазыңыз да, <strong>Жауапты Тексеру</strong>
+                    батырмасын басыңыз.
+                  </p>
+                </div>
+
+                <div class="task-feedback">
+                  <p id="speechFeedbackText" class="feedback-text">
+                    Суреттегі әрекетті ағылшын тілінде дауыстап айтыңыз.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <div class="navigation-row">
+              <button id="speechPrevButton" class="secondary-button" type="button">Артқа</button>
+              <button id="speechNextButton" class="secondary-button" type="button">Келесі</button>
+            </div>
+
+            <div class="feature-switch-row">
+              <button
+                id="openVoiceGameFeatureButton"
+                class="feature-switch-button feature-switch-button-prominent"
+                type="button"
+              >
+                <span class="feature-switch-kicker">КЕЛЕСІ ОЙЫН</span>
+                <span class="feature-switch-title">Дауыс ойынын ашу</span>
+                <span class="feature-switch-caption">Келесі ойын бетіне өту</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="task-list-panel">
+            <div class="panel-heading">
+              <p class="panel-label">Сөйлеу жаттығулары</p>
+              <h3>Сөйлеу арқылы тексерілетін 7 тапсырма</h3>
+            </div>
+            <div id="speechTaskList" class="task-list"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div id="featureThreeScreen" class="feature-screen">
+      <div class="page-shell">
+        <header class="hero hero-voice-game">
+          <div class="hero-copy">
+            <p class="eyebrow">3-бөлім</p>
+            <h1>Ойынды дауыспен басқарыңыз</h1>
+            <p class="hero-text">
+              Ағылшынша бір пәрмен айтсаңыз, ойын бірден әрекет етеді.
+              Тек үш сөз қолданылады: <strong>forward</strong>,
+              <strong>jump</strong>, <strong>stop</strong>.
+            </p>
+            <div class="hero-actions">
+              <button id="backToFeatureTwoButton" class="secondary-button" type="button">
+                Екінші бөлімге оралу
+              </button>
+              <button id="voiceGameListenButton" class="primary-button" type="button">
+                Дауыспен басқаруды бастау
+              </button>
+              <button id="voiceGameResetButton" class="ghost-button" type="button">
+                Ойынды қайта бастау
+              </button>
+            </div>
+            <div class="hero-status">
+              <span id="voiceGameSupportStatus" class="status-pill status-muted">
+                Дауыс пәрмендері дайын
+              </span>
+              <span id="voiceGameLiveStatus" class="status-pill status-idle">
+                "forward", "jump" немесе "stop" деп айтыңыз
+              </span>
+            </div>
+            <div class="voice-command-button-row">
+              <button class="voice-command-button" data-voice-command-button="forward" type="button">
+                FORWARD
+              </button>
+              <button class="voice-command-button" data-voice-command-button="jump" type="button">
+                JUMP
+              </button>
+              <button class="voice-command-button" data-voice-command-button="stop" type="button">
+                STOP
+              </button>
+            </div>
+            <p id="voiceGameControlHint" class="manual-fallback-note">
+              Егер браузерде микрофон жауап бермесе, осы батырмалармен де ойынды
+              жалғастыра аласыз.
+            </p>
+          </div>
+          <aside class="camera-panel speech-side-panel">
+            <div class="speech-side-card command-side-card">
+              <p class="panel-label">Пәрмен сөздері</p>
+              <div class="command-pills">
+                <span class="command-pill">FORWARD</span>
+                <span class="command-pill">JUMP</span>
+                <span class="command-pill">STOP</span>
+              </div>
+              <p class="camera-hint">
+                <strong>forward</strong> деп айтсаңыз жүгіре бастайды,
+                <strong>jump</strong> деп айтсаңыз кедергіден секіреді,
+                <strong>stop</strong> деп айтсаңыз ойын тоқтайды.
+              </p>
+              <div class="voice-command-preview">
+                <p class="panel-label">Соңғы пәрмен</p>
+                <strong id="voiceGameLastCommand">Күтіп тұр...</strong>
+              </div>
+            </div>
+          </aside>
+        </header>
+
+        <main class="game-layout voice-game-layout">
+          <section class="game-panel voice-game-panel">
+            <div class="panel-topbar">
+              <div>
+                <p class="panel-label">Мини ойын</p>
+                <h2>Дауысты жүгіруші</h2>
+              </div>
+              <div class="stats-row">
+                <div class="stat-card">
+                  <span class="stat-label">Ұпай</span>
+                  <strong id="voiceGameScoreValue">0</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Алма</span>
+                  <strong id="voiceGameApplesValue">0</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Өмір</span>
+                  <strong id="voiceGameHitsValue">0</strong>
+                </div>
+              </div>
+            </div>
+
+            <article class="voice-game-card">
+              <div id="voiceGameStage" class="voice-game-stage">
+                <div class="voice-game-sky">
+                  <span class="voice-cloud cloud-one"></span>
+                  <span class="voice-cloud cloud-two"></span>
+                  <span class="voice-cloud cloud-three"></span>
+                </div>
+                <div id="voiceGameObjects" class="voice-game-objects"></div>
+                <div id="voiceGamePlayer" class="voice-game-player">
+                  <span class="voice-game-avatar">🦖</span>
+                </div>
+                <div class="voice-game-ground">
+                  <span class="voice-game-grass"></span>
+                  <span class="voice-game-dirt"></span>
+                </div>
+              </div>
+
+            <div class="voice-game-info-grid">
+                <div class="instruction-box">
+                  <p class="instruction-label">Ойын ережесі</p>
+                  <p id="voiceGameStateText" class="instruction-text">
+                    Тыңдауды бастап, "forward" деп айтыңыз да, қораптардан секіріп өтіңіз.
+                  </p>
+                </div>
+                <div class="instruction-box">
+                  <p class="instruction-label">Естілген сөз</p>
+                  <p id="voiceGameHeardText" class="instruction-text">
+                    Әлі пәрмен естілген жоқ.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <div class="feature-switch-row">
+              <button id="openFingerQuizFeatureButton" class="feature-switch-button" type="button">
+                Келесі бөлім: Саусақ викторинасы
+              </button>
+            </div>
+          </section>
+
+          <section class="task-list-panel voice-game-side-panel">
+            <div class="panel-heading">
+              <p class="panel-label">Негізгі пәрмендер</p>
+              <h3>Айтыңыз және ойынның әрекетін бақылаңыз</h3>
+            </div>
+
+            <div class="voice-game-legend">
+              <div class="voice-legend-item">
+                <strong>FORWARD</strong>
+                <span>Оң жаққа қарай жүгіре бастайды</span>
+              </div>
+              <div class="voice-legend-item">
+                <strong>JUMP</strong>
+                <span>Келесі кедергіден секіреді</span>
+              </div>
+              <div class="voice-legend-item">
+                <strong>STOP</strong>
+                <span>Қозғалысты бірден тоқтатады</span>
+              </div>
+            </div>
+
+            <div class="voice-game-log-card">
+              <p class="panel-label">Соңғы пәрмендер</p>
+              <ul id="voiceGameCommandLog" class="voice-game-command-log"></ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div id="featureFourScreen" class="feature-screen">
+      <div class="page-shell">
+        <header class="hero hero-quiz">
+          <div class="hero-copy">
+            <p class="eyebrow">4-бөлім</p>
+            <h1>Саусақ викторинасы</h1>
+            <p class="hero-text">
+              Бұл соңғы бөлімде оқушы тест сұрақтарына қолымен жауап береді.
+              Камераны қосып, 1, 2 немесе 3 саусақ көрсетіңіз, ал жүйе сол
+              нұсқаны автоматты түрде таңдайды.
+            </p>
+            <div class="hero-actions">
+              <button id="backToFeatureThreeButton" class="secondary-button" type="button">
+                Үшінші бөлімге оралу
+              </button>
+              <button id="quizCameraButton" class="primary-button" type="button">
+                Камераны Қосу
+              </button>
+              <button id="quizResetButton" class="ghost-button" type="button">
+                Тестті Қайта Бастау
+              </button>
+            </div>
+            <div class="hero-status">
+              <span id="quizCameraStatus" class="status-pill status-idle">
+                Камера өшірулі
+              </span>
+              <span id="quizGestureStatus" class="status-pill status-muted">
+                Камераны қосып, 1, 2 немесе 3 саусақ көрсетіңіз
+              </span>
+            </div>
+          </div>
+          <aside class="camera-panel">
+            <div class="camera-frame">
+              <video id="quizCameraVideo" autoplay playsinline muted></video>
+              <canvas id="quizCameraCanvas"></canvas>
+            </div>
+            <p class="camera-hint">
+              Қолмен жауап беру ережесі:
+              <strong>1 саусақ = 1-нұсқа</strong>,
+              <strong>2 саусақ = 2-нұсқа</strong>,
+              <strong>3 саусақ = 3-нұсқа</strong>.
+            </p>
+          </aside>
+        </header>
+
+        <main class="game-layout quiz-layout">
+          <section class="game-panel quiz-game-panel">
+            <div class="panel-topbar">
+              <div>
+                <p class="panel-label">Тест</p>
+                <h2 id="quizTaskTitle">1 / 10</h2>
+              </div>
+              <div class="stats-row">
+                <div class="stat-card">
+                  <span class="stat-label">Ұпай</span>
+                  <strong id="quizScoreValue">0</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Орындалды</span>
+                  <strong id="quizProgressValue">0/10</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Саусақ</span>
+                  <strong id="quizDetectedValue">0</strong>
+                </div>
+              </div>
+            </div>
+
+            <article class="task-card quiz-task-card">
+              <div class="quiz-question-card">
+                <p class="instruction-label">Сұрақ нөмірі</p>
+                <div id="quizQuestionNumber" class="quiz-question-number">01</div>
+                <p id="quizHintText" class="quiz-hint-text">
+                  1, 2 немесе 3 саусақ көрсетіп, сәл ұстап тұрыңыз.
+                </p>
+                <p id="quizDetectedText" class="manual-fallback-note quiz-detected-text">
+                  Камера қолыңызды күтіп тұр.
+                </p>
+              </div>
+
+              <div class="task-content">
+                <div class="instruction-box">
+                  <p class="instruction-label">Сұрақ</p>
+                  <p id="quizQuestionText" class="instruction-text">
+                    Сұрақ мәтіні осы жерде шығады.
+                  </p>
+                </div>
+
+                <div id="quizOptions" class="quiz-options"></div>
+
+                <div class="task-feedback">
+                  <p id="quizFeedbackText" class="feedback-text">
+                    Камераны қосып, сұраққа саусақпен жауап беріңіз.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <div class="navigation-row">
+              <button id="quizPrevButton" class="secondary-button" type="button">Артқа</button>
+              <button id="quizNextButton" class="secondary-button" type="button">Келесі</button>
+            </div>
+          </section>
+
+          <section class="task-list-panel quiz-side-panel">
+            <div class="panel-heading">
+              <p class="panel-label">Сұрақтар</p>
+              <h3>Саусақпен таңдалатын 10 сұрақ</h3>
+            </div>
+
+            <div class="quiz-idea-card">
+              <p>👉 Камера қосулы</p>
+              <p>👉 Оқушы саусақ көрсетеді:</p>
+              <p>☝️ = 1-нұсқа</p>
+              <p>✌️ = 2-нұсқа</p>
+              <p>🤟 = 3-нұсқа</p>
+              <p>👉 Жүйе қимылды оқып, жауапты таңдайды</p>
+            </div>
+
+            <div class="voice-game-legend quiz-legend-card">
+              <div class="voice-legend-item">
+                <strong>1 САУСАҚ</strong>
+                <span>Бірінші жауап нұсқасын таңдайды</span>
+              </div>
+              <div class="voice-legend-item">
+                <strong>2 САУСАҚ</strong>
+                <span>Екінші жауап нұсқасын таңдайды</span>
+              </div>
+              <div class="voice-legend-item">
+                <strong>3 САУСАҚ</strong>
+                <span>Үшінші жауап нұсқасын таңдайды</span>
+              </div>
+            </div>
+
+            <div class="voice-game-log-card">
+              <p class="panel-label">Барлық сұрақ</p>
+              <div id="quizQuestionList" class="task-list"></div>
+            </div>
+          </section>
+        </main>
+
+        <section class="logo-3d-section logo-3d-stage-only">
+          <div class="logo-3d-stage-wrap">
+            <div id="englishForEveryone3D" class="logo-3d-stage" aria-label="English For Everyone 3D логотипі">
+              <div class="logo-3d-fallback">ENGLISH FOR EVERYONE</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="cursor" class="hand-cursor hidden"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="./app.js?v=20260421-1835"></script>
+    <script src="./english-3d.js?v=20260421-2015"></script>
+  </body>
+</html>
