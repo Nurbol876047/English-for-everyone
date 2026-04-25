@@ -4,70 +4,70 @@ const tasks = [
   {
     id: "basketball",
     title: "Playing Basketball",
-    instruction: "Баланың баскетбол ойнап жатқанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the boy is playing basketball.",
     answer: ["He", "is", "playing", "basketball", "now"],
     image: `./assets/images/task-01-basketball.png?v=${ASSET_VERSION}`,
   },
   {
     id: "feeding-pet",
     title: "Feeding His Pet",
-    instruction: "Баланың үй жануарын тамақтандырып жатқанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the boy is feeding his pet.",
     answer: ["He", "is", "feeding", "his", "pet"],
     image: `./assets/images/task-02-feeding-pet.png?v=${ASSET_VERSION}`,
   },
   {
     id: "temperature",
     title: "Talking on the Phone",
-    instruction: "Баланың телефонмен сөйлесіп тұрғанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the boy is talking on the phone.",
     answer: ["He", "is", "talking", "on", "the", "phone"],
     image: `./assets/images/task-03-temperature.png?v=${ASSET_VERSION}`,
   },
   {
     id: "computer",
     title: "Using a Laptop",
-    instruction: "Қыздың ноутбук қолданып отырғанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the girl is using a laptop.",
     answer: ["She", "is", "using", "a", "laptop"],
     image: `./assets/images/task-04-computer.png?v=${ASSET_VERSION}`,
   },
   {
     id: "bicycle",
     title: "Riding a Bicycle",
-    instruction: "Баланың велосипед теуіп жатқанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the boy is riding a bicycle.",
     answer: ["He", "is", "riding", "a", "bicycle"],
     image: `./assets/images/task-05-bicycle.png?v=${ASSET_VERSION}`,
   },
   {
     id: "cooking",
     title: "Cooking Together",
-    instruction: "Отбасының бірге тамақ пісіріп жатқанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the family is cooking together.",
     answer: ["They", "are", "cooking", "together", "now"],
     image: `./assets/images/task-06-cooking.png?v=${ASSET_VERSION}`,
   },
   {
     id: "watching-tv",
     title: "Watching TV",
-    instruction: "Балалардың бірге теледидар көріп отырғанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the children are watching TV together.",
     answer: ["They", "are", "watching", "TV", "together"],
     image: `./assets/images/task-07-watching-tv.png?v=${ASSET_VERSION}`,
   },
   {
     id: "dancing",
     title: "Jumping on a Trampoline",
-    instruction: "Балалардың батутта секіріп жатқанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the children are jumping on a trampoline.",
     answer: ["They", "are", "jumping", "on", "a", "trampoline"],
     image: `./assets/images/task-08-dancing.png?v=${ASSET_VERSION}`,
   },
   {
     id: "cleaning-room",
     title: "Cleaning the Room",
-    instruction: "Қыздардың бөлмені жинап жатқанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the girls are cleaning the room.",
     answer: ["They", "are", "cleaning", "the", "room"],
     image: `./assets/images/task-09-cleaning-room.png?v=${ASSET_VERSION}`,
   },
   {
     id: "painting",
     title: "Painting a Picture",
-    instruction: "Баланың сурет салып жатқанын білдіретін ағылшын сөйлемін құрастыр.",
+    instruction: "Build an English sentence that says the boy is painting a picture.",
     answer: ["He", "is", "painting", "a", "picture"],
     image: `./assets/images/task-10-painting.png?v=${ASSET_VERSION}`,
   },
@@ -81,7 +81,7 @@ const speechTasks = [
   {
     id: "speech-football",
     title: "Playing Football",
-    prompt: "Суретке қарап, баланың не істеп жатқанын толық ағылшын сөйлеммен айтыңыз.",
+    prompt: "Look at the picture and say what the boy is doing in a complete English sentence.",
     example: "The boy is playing football.",
     image: `./assets/images/speech-01-football.png?v=${ASSET_VERSION}`,
     required: [
@@ -95,7 +95,7 @@ const speechTasks = [
   {
     id: "speech-reading",
     title: "Reading a Book",
-    prompt: "Суретке қарап, адамның не істеп отырғанын ағылшын тілінде айтыңыз.",
+    prompt: "Look at the picture and say what the person is doing in English.",
     example: "The woman is reading a book.",
     image: `./assets/images/speech-02-reading.png?v=${ASSET_VERSION}`,
     required: [
@@ -109,7 +109,7 @@ const speechTasks = [
   {
     id: "speech-apple",
     title: "Eating an Apple",
-    prompt: "Суретке қарап, баланың не жеп тұрғанын ағылшын тілінде айтыңыз.",
+    prompt: "Look at the picture and say what the boy is eating in English.",
     example: "The boy is eating an apple.",
     image: `./assets/images/speech-03-apple.png?v=${ASSET_VERSION}`,
     required: [
@@ -123,7 +123,7 @@ const speechTasks = [
   {
     id: "speech-guitar",
     title: "Playing the Guitar",
-    prompt: "Суретке қарап, баланың музыкалық аспаппен не істеп тұрғанын айтыңыз.",
+    prompt: "Look at the picture and say what the boy is doing with the musical instrument.",
     example: "The boy is playing the guitar.",
     image: `./assets/images/speech-04-guitar.png?v=${ASSET_VERSION}`,
     required: [
@@ -137,7 +137,7 @@ const speechTasks = [
   {
     id: "speech-laptop",
     title: "Using a Laptop",
-    prompt: "Суретке қарап, баланың ноутбукпен не істеп отырғанын ағылшын тілінде айтыңыз.",
+    prompt: "Look at the picture and say what the boy is doing with the laptop in English.",
     example: "The boy is using a laptop.",
     image: `./assets/images/speech-05-laptop.png?v=${ASSET_VERSION}`,
     required: [
@@ -151,7 +151,7 @@ const speechTasks = [
   {
     id: "speech-running",
     title: "Running",
-    prompt: "Суретке қарап, баланың не істеп бара жатқанын ағылшын тілінде айтыңыз.",
+    prompt: "Look at the picture and say what the boy is doing in English.",
     example: "The boy is running.",
     image: `./assets/images/speech-06-running.png?v=${ASSET_VERSION}`,
     required: [
@@ -164,7 +164,7 @@ const speechTasks = [
   {
     id: "speech-sleeping",
     title: "Sleeping in Bed",
-    prompt: "Суретке қарап, баланың не істеп жатқанын толық ағылшын сөйлеммен айтыңыз.",
+    prompt: "Look at the picture and say what the boy is doing in a complete English sentence.",
     example: "The boy is sleeping in bed.",
     image: `./assets/images/speech-07-sleeping.png?v=${ASSET_VERSION}`,
     required: [
@@ -183,7 +183,7 @@ const speechTasks = [
 const quizTasks = [
   {
     id: "quiz-apple",
-    prompt: 'What is the English word for "алма"?',
+    prompt: "Which word names a common red or green fruit?",
     options: ["Apple", "Chair", "Window"],
     correctIndex: 0,
   },
@@ -268,7 +268,7 @@ const state = {
     lostFrames: 0,
     smoothX: window.innerWidth / 2,
     smoothY: window.innerHeight / 2,
-    lastGestureText: "Қимылды тану камера қосылғанда іске қосылады",
+    lastGestureText: "Gesture tracking will start when the camera is on",
   },
   camera: {
     streamStarted: false,
@@ -297,8 +297,8 @@ const state = {
     score: 0,
     apples: 0,
     hits: 0,
-    lastCommand: "Күтіп тұр...",
-    heardText: "Әлі пәрмен естілген жоқ.",
+    lastCommand: "Waiting...",
+    heardText: "No command heard yet.",
     commandLog: [],
     playerY: 0,
     velocityY: 0,
@@ -567,30 +567,30 @@ function renderSpeechTask() {
   elements.speechProgressValue.textContent = `${countSpeechCompleted()}/${speechTasks.length}`;
   elements.speechPrevButton.disabled = state.speech.currentTaskIndex === 0;
   elements.speechNextButton.disabled = state.speech.currentTaskIndex === speechTasks.length - 1;
-  elements.speechModelText.textContent = `Үлгі: ${task.example}`;
+  elements.speechModelText.textContent = `Example: ${task.example}`;
   elements.speechModelText.classList.toggle("hidden", !state.speech.hintVisible);
   elements.speechHintButton.textContent = state.speech.hintVisible
-    ? "Үлгі Сөйлемді Жасыру"
-    : "Үлгі Сөйлемді Көру";
+    ? "Hide Example Sentence"
+    : "Show Example Sentence";
   elements.speechTranscript.value = state.speech.transcript;
   elements.speechManualFallback.classList.toggle(
     "hidden",
     !(state.speech.fallbackToTyping || !state.speech.supported),
   );
 
-  setSpeechFeedback("Суреттегі әрекетті ағылшын тілінде дауыстап айтыңыз.", "");
+  setSpeechFeedback("Say the action in the picture aloud in English.", "");
   if (state.speech.fallbackToTyping || !state.speech.supported) {
-    setSpeechLiveStatus("Қолмен енгізу режимі", "status-idle");
+    setSpeechLiveStatus("Manual typing mode", "status-idle");
     setSpeechTranscriptStatus(
-      "Микрофон іске қосылмаса, сөйлемді қолмен жазып тексеруге болады.",
+      "If the microphone does not start, you can type the sentence and check it manually.",
       "status-error-text",
     );
   } else {
     if (!state.speech.listening) {
-      setSpeechLiveStatus("Әзірше тыңдап тұрған жоқ", "status-idle");
+      setSpeechLiveStatus("Not listening yet", "status-idle");
     }
     setSpeechTranscriptStatus(
-      "Микрофон батырмасын басып, сурет бойынша сөйлем айтыңыз.",
+      "Press the microphone button and say a sentence about the picture.",
       "",
     );
   }
@@ -609,7 +609,7 @@ function renderSpeechTaskList() {
           <div class="task-mini">${taskVisualMarkup(task, true)}</div>
           <div class="task-list-copy">
             <strong>${task.order}. ${task.title}</strong>
-            <span>Мағынамен тексеріледі</span>
+            <span>Checked by meaning</span>
           </div>
           <span class="completion-dot"></span>
         </button>
@@ -647,8 +647,8 @@ function toggleSpeechHint() {
   state.speech.hintVisible = !state.speech.hintVisible;
   elements.speechModelText.classList.toggle("hidden", !state.speech.hintVisible);
   elements.speechHintButton.textContent = state.speech.hintVisible
-    ? "Үлгі Сөйлемді Жасыру"
-    : "Үлгі Сөйлемді Көру";
+    ? "Hide Example Sentence"
+    : "Show Example Sentence";
 }
 
 function initSpeechRecognition() {
@@ -667,8 +667,8 @@ function initSpeechRecognition() {
   recognition.onstart = () => {
     state.speech.listening = true;
     setSpeechFallbackMode(false);
-    setSpeechLiveStatus("Тыңдап тұр...", "status-live");
-    setSpeechTranscriptStatus("Ағылшын тілінде толық сөйлемді айта беріңіз.", "status-live-text");
+    setSpeechLiveStatus("Listening...", "status-live");
+    setSpeechTranscriptStatus("Say a complete sentence in English.", "status-live-text");
     updateSpeechButtons();
   };
 
@@ -691,7 +691,7 @@ function initSpeechRecognition() {
     }
 
     if (interimText.trim()) {
-      setSpeechTranscriptStatus(`Тыңдап тұр: ${interimText.trim()}`, "status-live-text");
+      setSpeechTranscriptStatus(`Listening: ${interimText.trim()}`, "status-live-text");
     }
   };
 
@@ -700,27 +700,27 @@ function initSpeechRecognition() {
     updateSpeechButtons();
 
     if (event.error === "no-speech") {
-      setSpeechLiveStatus("Сөйлеу естілмеді", "status-idle");
+      setSpeechLiveStatus("No speech heard", "status-idle");
       setSpeechTranscriptStatus(
-        "Сөйлеу анық естілмеді. Тағы бір рет айтып көріңіз немесе мәтінді қолмен жазыңыз.",
+        "Speech was not clear. Try again or type the sentence manually.",
         "status-error-text",
       );
       return;
     }
 
     if (event.error === "aborted") {
-      setSpeechLiveStatus("Тыңдау тоқтатылды", "status-idle");
+      setSpeechLiveStatus("Listening stopped", "status-idle");
       return;
     }
 
     if (shouldUseVoiceFallback(event.error)) {
       setSpeechFallbackMode(true, event.error);
-      setSpeechLiveStatus("Қолмен енгізу режимі", "status-idle");
+      setSpeechLiveStatus("Manual typing mode", "status-idle");
       setSpeechTranscriptStatus(getSpeechErrorMessage(event.error), "status-error-text");
       return;
     }
 
-    setSpeechLiveStatus("Микрофон қатесі", "status-error");
+    setSpeechLiveStatus("Microphone error", "status-error");
     setSpeechTranscriptStatus(getSpeechErrorMessage(event.error), "status-error-text");
   };
 
@@ -733,11 +733,11 @@ function initSpeechRecognition() {
       return;
     }
 
-    setSpeechLiveStatus("Тыңдау аяқталды", "status-idle");
+    setSpeechLiveStatus("Listening finished", "status-idle");
     if (state.speech.transcript.trim()) {
-      setSpeechTranscriptStatus("Жауап жазылды. Қаласаңыз бірден тексеріңіз.", "");
+      setSpeechTranscriptStatus("Your answer was recorded. You can check it now.", "");
     } else {
-      setSpeechTranscriptStatus("Дауыс анық естілмеді. Тағы бір рет айтып көріңіз.", "status-error-text");
+      setSpeechTranscriptStatus("Your voice was not clear. Try again.", "status-error-text");
     }
   };
 
@@ -748,9 +748,9 @@ function initSpeechRecognition() {
 function toggleSpeechListening() {
   if (!state.speech.supported || !state.speech.recognition) {
     setSpeechFallbackMode(true);
-    setSpeechLiveStatus("Қолмен енгізу режимі", "status-idle");
+    setSpeechLiveStatus("Manual typing mode", "status-idle");
     setSpeechTranscriptStatus(
-      "Бұл браузерде микрофон толық іске қосылмады. Сөйлемді қолмен жаза аласыз.",
+      "The microphone did not fully start in this browser. You can type the sentence manually.",
       "status-error-text",
     );
     return;
@@ -763,7 +763,7 @@ function toggleSpeechListening() {
 
   state.speech.transcript = "";
   elements.speechTranscript.value = "";
-  setSpeechFeedback("Суреттегі әрекетті ағылшын тілінде дауыстап айтыңыз.", "");
+  setSpeechFeedback("Say the action in the picture aloud in English.", "");
 
   try {
     state.speech.recognition.start();
@@ -771,9 +771,9 @@ function toggleSpeechListening() {
     console.error(error);
     state.speech.listening = false;
     setSpeechFallbackMode(true);
-    setSpeechLiveStatus("Қолмен енгізу режимі", "status-idle");
+    setSpeechLiveStatus("Manual typing mode", "status-idle");
     setSpeechTranscriptStatus(
-      "Микрофон іске қосылмады. Сөйлемді қолмен енгізіп тексеруге болады.",
+      "The microphone did not start. You can type the sentence and check it manually.",
       "status-error-text",
     );
     updateSpeechButtons();
@@ -788,10 +788,10 @@ function stopSpeechListening() {
 
 function updateSpeechButtons() {
   elements.speechListenButton.textContent = state.speech.listening
-    ? "Тыңдауды Тоқтату"
+    ? "Stop Listening"
     : state.speech.fallbackToTyping
-      ? "Микрофонды Қайта Байқау"
-      : "Сөйлеуді Бастау";
+      ? "Try Microphone Again"
+      : "Start Speaking";
   elements.speechListenButton.disabled = !state.speech.supported;
 }
 
@@ -801,8 +801,8 @@ function checkSpeechTask() {
   state.speech.transcript = transcript;
 
   if (!transcript) {
-    setSpeechFeedback("Алдымен сөйлемді айтыңыз немесе мәтінді енгізіңіз.", "feedback-error");
-    setSpeechTranscriptStatus("Жауап бос тұр. Ағылшын сөйлемін айтыңыз.", "status-error-text");
+    setSpeechFeedback("First say a sentence or type your answer.", "feedback-error");
+    setSpeechTranscriptStatus("The answer is empty. Say an English sentence.", "status-error-text");
     return;
   }
 
@@ -813,14 +813,14 @@ function checkSpeechTask() {
       state.speech.score += 10;
     }
 
-    setSpeechFeedback("Өте жақсы! Жүйе мағынаны дұрыс деп қабылдады.", "feedback-success");
-    setSpeechLiveStatus("Мағынасы дұрыс танылды", "status-live");
+    setSpeechFeedback("Great job! The system accepted the meaning.", "feedback-success");
+    setSpeechLiveStatus("Meaning recognized correctly", "status-live");
   } else if (evaluation.partial) {
     setSpeechFeedback(evaluation.message, "feedback-warm");
-    setSpeechLiveStatus("Жауап жақын тұр", "status-muted");
+    setSpeechLiveStatus("The answer is close", "status-muted");
   } else {
     setSpeechFeedback(evaluation.message, "feedback-error");
-    setSpeechLiveStatus("Тағы бір рет байқап көріңіз", "status-error");
+    setSpeechLiveStatus("Try again", "status-error");
   }
 
   elements.speechScoreValue.textContent = String(state.speech.score);
@@ -858,10 +858,10 @@ function setSpeechFallbackMode(active, errorCode = "") {
 
   if (!active) {
     if (state.speech.supported) {
-      setSpeechSupportStatus("Микрофон арқылы жауап беруге болады", "status-live");
+      setSpeechSupportStatus("You can answer with the microphone", "status-live");
     } else {
       setSpeechSupportStatus(
-        "Бұл браузерде микрофон толық іске қосылмайды, бірақ мәтінді қолмен жаза аласыз",
+        "The microphone does not fully work in this browser, but you can type your answer manually",
         "status-muted",
       );
     }
@@ -870,8 +870,8 @@ function setSpeechFallbackMode(active, errorCode = "") {
 
   const supportText =
     errorCode === "not-allowed"
-      ? "Микрофонға рұқсат берілмеді. Жауапты қолмен жазып тексере аласыз."
-      : "Браузердің дауыс сервисі істемеді. Жауапты қолмен жазып тексере аласыз.";
+      ? "Microphone permission was denied. You can type and check your answer manually."
+      : "The browser voice service did not work. You can type and check your answer manually.";
   setSpeechSupportStatus(supportText, "status-muted");
 }
 
@@ -886,7 +886,7 @@ function evaluateSpeechMeaning(task, transcript) {
     return {
       passed: true,
       partial: false,
-      message: "Мағына дұрыс танылды.",
+      message: "The meaning was recognized correctly.",
     };
   }
 
@@ -894,14 +894,14 @@ function evaluateSpeechMeaning(task, transcript) {
     return {
       passed: false,
       partial: true,
-      message: `Жақын айттыңыз. Үлгіге жақындатып көріңіз: ${task.example}`,
+      message: `That was close. Try to get nearer to this example: ${task.example}`,
     };
   }
 
   return {
     passed: false,
     partial: false,
-    message: "Мағынасы суретке сай келмей тұр. Тағы бір толық сөйлем айтып көріңіз.",
+    message: "The meaning does not match the picture yet. Try another complete sentence.",
   };
 }
 
@@ -944,14 +944,14 @@ function stemSpeechToken(token) {
 
 function getSpeechErrorMessage(code) {
   const messages = {
-    "audio-capture": "Микрофон табылмады. Құрылғыны тексеріңіз.",
-    "not-allowed": "Микрофонға рұқсат берілмеді.",
-    "service-not-allowed": "Дауыс тану сервисіне рұқсат жоқ.",
-    "network": "Браузердің дауыс сервисі жауап бермеді. Бұл Brave ішінде немесе интернет шектелгенде жиі болады.",
-    "no-speech": "Сөйлеу анық естілмеді.",
+    "audio-capture": "No microphone was found. Check your device.",
+    "not-allowed": "Microphone permission was denied.",
+    "service-not-allowed": "Speech recognition service is not allowed.",
+    "network": "The browser voice service did not respond. This often happens in Brave or when internet access is limited.",
+    "no-speech": "Speech was not clear.",
   };
 
-  return messages[code] || "Дауыс тану кезінде қате пайда болды.";
+  return messages[code] || "An error occurred during speech recognition.";
 }
 
 function currentQuizTask() {
@@ -988,8 +988,8 @@ function setQuizIdleStatuses() {
     return;
   }
 
-  setCameraStatus("Камера өшірулі", "status-idle", "featureFour");
-  setGestureStatus("Камераны қосып, 1, 2 немесе 3 саусақ көрсетіңіз", "status-muted", "featureFour");
+  setCameraStatus("Camera off", "status-idle", "featureFour");
+  setGestureStatus("Turn on the camera and show 1, 2, or 3 fingers", "status-muted", "featureFour");
 }
 
 function getQuizFeedbackState(taskIndex = state.quiz.currentTaskIndex) {
@@ -1000,21 +1000,21 @@ function getQuizFeedbackState(taskIndex = state.quiz.currentTaskIndex) {
     return {
       text:
         countQuizAnswered() === quizTasks.length
-          ? `Тест аяқталды. Жалпы ұпай: ${state.quiz.score}/${quizTasks.length * 10}.`
-          : "Камераны қосып, 1, 2 немесе 3 саусақпен жауап беріңіз.",
+          ? `Quiz complete. Total score: ${state.quiz.score}/${quizTasks.length * 10}.`
+          : "Turn on the camera and answer with 1, 2, or 3 fingers.",
       tone: "",
     };
   }
 
   const baseMessage =
     answer === task.correctIndex
-      ? "Дұрыс жауап! Жарайсыз!"
-      : `Қате. Дұрыс жауап: ${task.correctIndex + 1}) ${task.options[task.correctIndex]}`;
+      ? "Correct answer! Well done!"
+      : `Incorrect. Correct answer: ${task.correctIndex + 1}) ${task.options[task.correctIndex]}`;
 
   return {
     text:
       countQuizAnswered() === quizTasks.length
-        ? `${baseMessage} Тест аяқталды. Жалпы ұпай: ${state.quiz.score}/${quizTasks.length * 10}.`
+        ? `${baseMessage} Quiz complete. Total score: ${state.quiz.score}/${quizTasks.length * 10}.`
         : baseMessage,
     tone: answer === task.correctIndex ? "feedback-success" : "feedback-error",
   };
@@ -1030,12 +1030,12 @@ function updateQuizDetectedDisplay() {
   elements.quizDetectedValue.textContent = String(state.quiz.detectedFingers || 0);
 
   if (!cameraReady) {
-    elements.quizDetectedText.textContent = "Камераны қосыңыз, содан кейін 1, 2 немесе 3 саусақ көрсетіңіз.";
+    elements.quizDetectedText.textContent = "Turn on the camera, then show 1, 2, or 3 fingers.";
     return;
   }
 
   if (performance.now() < state.quiz.gestureLockedUntil && state.quiz.detectedFingers) {
-    elements.quizDetectedText.textContent = `Жауап ${state.quiz.detectedFingers}-нұсқа ретінде сақталды.`;
+    elements.quizDetectedText.textContent = `Your answer was saved as option ${state.quiz.detectedFingers}.`;
     return;
   }
 
@@ -1043,12 +1043,12 @@ function updateQuizDetectedDisplay() {
     const holdPercent = Math.max(0, Math.min(100, Math.round(state.quiz.holdProgress * 100)));
     elements.quizDetectedText.textContent =
       holdPercent >= 100
-        ? `${state.quiz.detectedFingers} саусақ танылды.`
-        : `${state.quiz.detectedFingers} саусақ танылды. Ұстап тұрыңыз: ${holdPercent}%`;
+        ? `${state.quiz.detectedFingers} finger(s) recognized.`
+        : `${state.quiz.detectedFingers} finger(s) recognized. Keep holding: ${holdPercent}%`;
     return;
   }
 
-  elements.quizDetectedText.textContent = "Жауап таңдау үшін 1, 2 немесе 3 саусақ көрсетіңіз.";
+  elements.quizDetectedText.textContent = "Show 1, 2, or 3 fingers to choose an answer.";
 }
 
 function renderQuizQuestionList() {
@@ -1062,8 +1062,8 @@ function renderQuizQuestionList() {
         <button class="task-list-item ${active ? "active" : ""} ${answered ? "done" : ""} ${answered && !correct ? "quiz-wrong" : ""}" data-quiz-task-index="${index}" type="button">
           <div class="task-mini quiz-mini-badge">${String(task.order).padStart(2, "0")}</div>
           <div class="task-list-copy">
-            <strong>${task.order}. Сұрақ</strong>
-            <span>${answered ? (correct ? "Дұрыс" : "Жауап берілді") : "Жауап күтілуде"}</span>
+            <strong>${task.order}. Question</strong>
+            <span>${answered ? (correct ? "Correct" : "Answered") : "Waiting for answer"}</span>
           </div>
           <span class="completion-dot"></span>
         </button>
@@ -1091,8 +1091,8 @@ function renderQuiz() {
   elements.quizQuestionText.textContent = task.prompt;
   elements.quizHintText.textContent =
     selectedAnswer === null
-      ? "1, 2 немесе 3 саусақ көрсетіп, сәл ұстап тұрыңыз."
-      : "Жауап сақталды. Қаласаңыз өзгерте аласыз.";
+      ? "Show 1, 2, or 3 fingers and hold for a moment."
+      : "Your answer is saved. You can change it if you want.";
   elements.quizScoreValue.textContent = String(state.quiz.score);
   elements.quizProgressValue.textContent = `${countQuizAnswered()}/${quizTasks.length}`;
   elements.quizPrevButton.disabled = state.quiz.currentTaskIndex === 0;
@@ -1190,19 +1190,19 @@ function setVoiceGameFallbackMode(active, errorCode = "") {
   state.voiceGame.fallbackToButtons = active || !state.voiceGame.supported;
 
   if (!state.voiceGame.supported) {
-    setVoiceGameSupportStatus("Бұл жерде дауыс сервисі қолжетімсіз. Төмендегі батырмаларды қолданыңыз.", "status-muted");
+    setVoiceGameSupportStatus("Voice service is unavailable here. Use the buttons below.", "status-muted");
     return;
   }
 
   if (!active) {
-    setVoiceGameSupportStatus("Дауыс пәрмендері дайын", "status-live");
+    setVoiceGameSupportStatus("Voice commands ready", "status-live");
     return;
   }
 
   const supportText =
     errorCode === "not-allowed"
-      ? "Микрофонға рұқсат берілмеді. Төмендегі батырмаларды қолданыңыз."
-      : "Браузердің дауыс сервисі қолжетімсіз. Төмендегі батырмаларды қолданыңыз немесе қайта байқап көріңіз.";
+      ? "Microphone permission was denied. Use the buttons below."
+      : "The browser voice service is unavailable. Use the buttons below or try again.";
   setVoiceGameSupportStatus(supportText, "status-muted");
 }
 
@@ -1221,7 +1221,7 @@ function initVoiceGameRecognition() {
 
   recognition.onstart = () => {
     setVoiceGameFallbackMode(false);
-    setVoiceGameLiveStatus('Тыңдап тұр... "forward", "jump" немесе "stop" деп айтыңыз', "status-live");
+    setVoiceGameLiveStatus('Listening... say "forward", "jump", or "stop"', "status-live");
     updateVoiceGameButtons();
   };
 
@@ -1241,8 +1241,8 @@ function initVoiceGameRecognition() {
 
   recognition.onerror = (event) => {
     if (event.error === "no-speech" && state.voiceGame.listening) {
-      setVoiceGameLiveStatus('Әлі тыңдап тұр... "forward", "jump" немесе "stop" деп айтыңыз', "status-muted");
-      setVoiceGameStateText("Дауыс анық естілмеді. Пәрменді тағы бір рет айтып көріңіз.");
+      setVoiceGameLiveStatus('Still listening... say "forward", "jump", or "stop"', "status-muted");
+      setVoiceGameStateText("Your voice was not clear. Say the command again.");
       return;
     }
 
@@ -1253,14 +1253,14 @@ function initVoiceGameRecognition() {
 
     if (shouldUseVoiceFallback(event.error)) {
       setVoiceGameFallbackMode(true, event.error);
-      setVoiceGameLiveStatus("Батырмамен басқару қосулы", "status-idle");
-      setVoiceGameStateText(`${getVoiceGameErrorMessage(event.error)} Төмендегі FORWARD, JUMP немесе STOP батырмаларын қолданыңыз.`);
+      setVoiceGameLiveStatus("Button controls enabled", "status-idle");
+      setVoiceGameStateText(`${getVoiceGameErrorMessage(event.error)} Use the FORWARD, JUMP, or STOP buttons below.`);
       state.voiceGame.listening = false;
       updateVoiceGameButtons();
       return;
     }
 
-    setVoiceGameLiveStatus("Дауыспен басқару қатесі", "status-error");
+    setVoiceGameLiveStatus("Voice control error", "status-error");
     setVoiceGameStateText(getVoiceGameErrorMessage(event.error));
     state.voiceGame.listening = false;
     updateVoiceGameButtons();
@@ -1291,8 +1291,8 @@ function initVoiceGameRecognition() {
 function toggleVoiceGameListening() {
   if (!state.voiceGame.supported || !state.voiceGame.recognition) {
     setVoiceGameFallbackMode(true);
-    setVoiceGameLiveStatus("Батырмамен басқару қосулы", "status-idle");
-    setVoiceGameStateText('Бұл жерде дауыс сервисі қолжетімсіз. FORWARD, JUMP және STOP батырмаларын қолданыңыз.');
+    setVoiceGameLiveStatus("Button controls enabled", "status-idle");
+    setVoiceGameStateText("Voice service is unavailable here. Use the FORWARD, JUMP, and STOP buttons.");
     return;
   }
 
@@ -1302,7 +1302,7 @@ function toggleVoiceGameListening() {
   }
 
   state.voiceGame.listening = true;
-  setVoiceGameLiveStatus('Тыңдап тұр... "forward", "jump" немесе "stop" деп айтыңыз', "status-live");
+  setVoiceGameLiveStatus('Listening... say "forward", "jump", or "stop"', "status-live");
 
   try {
     state.voiceGame.recognition.start();
@@ -1310,8 +1310,8 @@ function toggleVoiceGameListening() {
     console.error(error);
     state.voiceGame.listening = false;
     setVoiceGameFallbackMode(true);
-    setVoiceGameLiveStatus("Батырмамен басқару қосулы", "status-idle");
-    setVoiceGameStateText("Микрофон іске қосылмады. FORWARD, JUMP және STOP батырмаларын қолданыңыз немесе қайта байқап көріңіз.");
+    setVoiceGameLiveStatus("Button controls enabled", "status-idle");
+    setVoiceGameStateText("The microphone did not start. Use the FORWARD, JUMP, and STOP buttons or try again.");
   }
 
   updateVoiceGameButtons();
@@ -1326,16 +1326,16 @@ function stopVoiceGameListening() {
       console.error(error);
     }
   }
-  setVoiceGameLiveStatus('Дауыспен басқару тоқтады. Қайта қосқан соң "forward", "jump" немесе "stop" деп айтыңыз.', "status-idle");
+  setVoiceGameLiveStatus('Voice control stopped. Turn it on again and say "forward", "jump", or "stop".', "status-idle");
   updateVoiceGameButtons();
 }
 
 function updateVoiceGameButtons() {
   elements.voiceGameListenButton.textContent = state.voiceGame.listening
-    ? "Дауыспен басқаруды тоқтату"
+    ? "Stop Voice Control"
     : state.voiceGame.fallbackToButtons
-      ? "Дауыспен басқаруды қайта байқау"
-      : "Дауыспен басқаруды бастау";
+      ? "Try Voice Control Again"
+      : "Start Voice Control";
   elements.voiceGameListenButton.disabled = !state.voiceGame.supported;
 }
 
@@ -1345,8 +1345,8 @@ function resetVoiceGame() {
   state.voiceGame.score = 0;
   state.voiceGame.apples = 0;
   state.voiceGame.hits = 0;
-  state.voiceGame.lastCommand = "Күтіп тұр...";
-  state.voiceGame.heardText = "Әлі пәрмен естілген жоқ.";
+  state.voiceGame.lastCommand = "Waiting...";
+  state.voiceGame.heardText = "No command heard yet.";
   state.voiceGame.playerY = 0;
   state.voiceGame.velocityY = 0;
   state.voiceGame.objects = [];
@@ -1355,13 +1355,13 @@ function resetVoiceGame() {
   state.voiceGame.objectSerial = 0;
   spawnVoiceGameSet();
   renderVoiceGame();
-  setVoiceGameStateText('Ойын қайта басталды. Қозғалу үшін "forward" деп айтыңыз.');
+  setVoiceGameStateText('Game restarted. Say "forward" to start moving.');
   setVoiceGameLiveStatus(
     state.voiceGame.listening
-      ? 'Тыңдап тұр... "forward", "jump" немесе "stop" деп айтыңыз'
+      ? 'Listening... say "forward", "jump", or "stop"'
       : state.voiceGame.fallbackToButtons
-        ? "Батырмамен басқару дайын"
-        : '"forward", "jump" немесе "stop" деп айтыңыз',
+        ? "Button controls ready"
+        : 'Say "forward", "jump", or "stop"',
     state.voiceGame.listening ? "status-live" : "status-idle",
   );
 }
@@ -1403,7 +1403,7 @@ function renderVoiceGameObjects() {
 
 function renderVoiceGameCommandLog() {
   if (!state.voiceGame.commandLog.length) {
-    elements.voiceGameCommandLog.innerHTML = "<li><strong>Дайын:</strong> Ойын алғашқы пәрменіңізді күтіп тұр.</li>";
+    elements.voiceGameCommandLog.innerHTML = "<li><strong>Ready:</strong> The game is waiting for your first command.</li>";
     return;
   }
 
@@ -1469,7 +1469,7 @@ function updateVoiceGamePhysics(deltaSeconds) {
         object.collected = true;
         state.voiceGame.apples += 1;
         state.voiceGame.score += 10;
-        setVoiceGameStateText("Жарайсыз! Бір алманы жинап алдыңыз.");
+        setVoiceGameStateText("Great job! You collected an apple.");
       } else {
         object.hit = true;
         state.voiceGame.hits += 1;
@@ -1480,11 +1480,11 @@ function updateVoiceGamePhysics(deltaSeconds) {
         if (remainingLives <= 0) {
           state.voiceGame.gameOver = true;
           state.voiceGame.running = false;
-          setVoiceGameStateText('Ойын аяқталды. Динозавр барлық 10 өмірін жоғалтты. Қайта көру үшін "Ойынды қайта бастау" батырмасын басыңыз.');
-          setVoiceGameLiveStatus("Ойын аяқталды", "status-error");
+          setVoiceGameStateText('Game over. The dinosaur lost all 10 lives. Press "Restart Game" to try again.');
+          setVoiceGameLiveStatus("Game over", "status-error");
         } else {
-          setVoiceGameStateText(`Кедергі тиді. Тағы ${remainingLives} өмір қалды.`);
-          setVoiceGameLiveStatus("Кедергіге тиді, ойын жалғасуда", "status-live");
+          setVoiceGameStateText(`You hit an obstacle. ${remainingLives} lives left.`);
+          setVoiceGameLiveStatus("Obstacle hit, game continues", "status-live");
         }
       }
     } else if (object.type === "crate" && !object.passed && object.x + object.width < VOICE_GAME_CONFIG.playerX) {
@@ -1564,17 +1564,17 @@ function handleVoiceGameSpeech(transcript) {
   if (!command) {
     state.voiceGame.heardText = transcript;
     elements.voiceGameHeardText.textContent = transcript;
-    setVoiceGameStateText('Пәрмен танылмады. "forward", "jump" немесе "stop" деп айтыңыз.');
-    pushVoiceGameCommand("unknown", `естігені: "${transcript}"`);
+    setVoiceGameStateText('Command not recognized. Say "forward", "jump", or "stop".');
+    pushVoiceGameCommand("unknown", `heard: "${transcript}"`);
     renderVoiceGameCommandLog();
     return;
   }
 
-  applyVoiceGameCommand(command, transcript, `естігені: "${transcript}"`);
+  applyVoiceGameCommand(command, transcript, `heard: "${transcript}"`);
 }
 
 function triggerVoiceGameButtonCommand(command) {
-  applyVoiceGameCommand(command, `Батырма: ${command.toUpperCase()}`, "қосалқы батырма басылды");
+  applyVoiceGameCommand(command, `Button: ${command.toUpperCase()}`, "fallback button pressed");
 }
 
 function applyVoiceGameCommand(command, heardText, logText) {
@@ -1586,27 +1586,27 @@ function applyVoiceGameCommand(command, heardText, logText) {
   renderVoiceGameCommandLog();
 
   if (state.voiceGame.gameOver) {
-    setVoiceGameStateText('Ойын аяқталды. Қайта бастау үшін "Ойынды қайта бастау" батырмасын басыңыз.');
-    setVoiceGameLiveStatus("Ойын аяқталды", "status-error");
+    setVoiceGameStateText('Game over. Press "Restart Game" to start again.');
+    setVoiceGameLiveStatus("Game over", "status-error");
     renderVoiceGame();
     return;
   }
 
   if (command === "forward") {
     state.voiceGame.running = true;
-    setVoiceGameLiveStatus("Алға жүгіріп барады", "status-live");
-    setVoiceGameStateText('Керемет! Кейіпкер жүгіріп кетті. Келесі кедергіге "jump" деп айтыңыз.');
+    setVoiceGameLiveStatus("Running forward", "status-live");
+    setVoiceGameStateText('Great! The character is running. Say "jump" at the next obstacle.');
   } else if (command === "stop") {
     state.voiceGame.running = false;
-    setVoiceGameLiveStatus("Жүгіру тоқтады", "status-idle");
-    setVoiceGameStateText('Кейіпкер тоқтады. Қайта жүру үшін "forward" деп айтыңыз.');
+    setVoiceGameLiveStatus("Running stopped", "status-idle");
+    setVoiceGameStateText('The character stopped. Say "forward" to move again.');
   } else if (command === "jump") {
     if (state.voiceGame.playerY === 0) {
       state.voiceGame.velocityY = VOICE_GAME_CONFIG.jumpVelocity;
-      setVoiceGameLiveStatus("Секіру пәрмені қабылданды", "status-live");
-      setVoiceGameStateText("Жақсы секіріс! Жалғастырыңыз.");
+      setVoiceGameLiveStatus("Jump command accepted", "status-live");
+      setVoiceGameStateText("Nice jump! Keep going.");
     } else {
-      setVoiceGameStateText("Кейіпкер қазірдің өзінде секіріп тұр.");
+      setVoiceGameStateText("The character is already jumping.");
     }
   }
 
@@ -1660,14 +1660,14 @@ function setVoiceGameStateText(text) {
 
 function getVoiceGameErrorMessage(code) {
   const messages = {
-    "audio-capture": "Микрофон табылмады.",
-    "not-allowed": "Микрофонға рұқсат берілмеді.",
-    "service-not-allowed": "Бұл жерде дауыс сервисіне рұқсат жоқ.",
-    "network": "Браузердің дауыс сервисі жауап бермеді. Бұл Brave ішінде немесе интернет шектелгенде жиі болады.",
-    "no-speech": "Дауыс анық естілмеді.",
+    "audio-capture": "No microphone was found.",
+    "not-allowed": "Microphone permission was denied.",
+    "service-not-allowed": "Voice service is not allowed here.",
+    "network": "The browser voice service did not respond. This often happens in Brave or when internet access is limited.",
+    "no-speech": "Voice was not clear.",
   };
 
-  return messages[code] || "Дауыспен басқару пәрменді түсінбеді.";
+  return messages[code] || "Voice control did not understand the command.";
 }
 
 function renderCurrentTask() {
@@ -1689,8 +1689,8 @@ function renderCurrentTask() {
 
   const isDone = state.completed[state.currentTaskIndex];
   elements.feedbackText.textContent = isDone
-    ? "Жарайсың! Сөйлем дұрыс."
-    : "Әр сөзді дұрыс орынға апарыңыз.";
+    ? "Nice work! The sentence is correct."
+    : "Move each word to the correct place.";
   elements.feedbackText.className = `feedback-text ${isDone ? "feedback-success" : ""}`;
 
   elements.sentenceSlots.innerHTML = task.answer
@@ -1732,7 +1732,7 @@ function renderTaskList() {
           <div class="task-mini">${taskVisualMarkup(task, true)}</div>
           <div class="task-list-copy">
             <strong>${task.order}. ${task.title}</strong>
-            <span>${task.answer.length} сөзден тұрады</span>
+            <span>${task.answer.length} words</span>
           </div>
           <span class="completion-dot"></span>
         </button>
@@ -1984,7 +1984,7 @@ function checkCurrentTask() {
   const isCorrect = placements.every((word, index) => word === task.answer[index]);
 
   if (!isFull) {
-    setFeedback("Тексермес бұрын барлық сөзді орналастырыңыз.", "feedback-error");
+    setFeedback("Place every word before checking.", "feedback-error");
     return;
   }
 
@@ -1994,15 +1994,15 @@ function checkCurrentTask() {
       state.score += 10;
     }
 
-    setFeedback("Дұрыс! Сөйлем суретке сәйкес келеді.", "feedback-success");
+    setFeedback("Correct! The sentence matches the picture.", "feedback-success");
   } else {
-    setFeedback("Әлі дұрыс емес. Сөздерді қайта жылжытып көріңіз.", "feedback-error");
+    setFeedback("Not quite yet. Move the words and try again.", "feedback-error");
   }
 
   renderCurrentTask();
   elements.feedbackText.textContent = isCorrect
-    ? "Дұрыс! Сөйлем суретке сәйкес келеді."
-    : "Әлі дұрыс емес. Сөздерді қайта жылжытып көріңіз.";
+    ? "Correct! The sentence matches the picture."
+    : "Not quite yet. Move the words and try again.";
   elements.feedbackText.className = `feedback-text ${isCorrect ? "feedback-success" : "feedback-error"}`;
 
   if (isCorrect) {
@@ -2133,7 +2133,7 @@ function shuffleCurrentTask() {
   state.placements[state.currentTaskIndex] = Array(task.answer.length).fill(null);
   state.completed[state.currentTaskIndex] = false;
   recalculateScore();
-  setFeedback("Сөздер қайта араластырылды. Сөйлемді қайтадан құрастырыңыз.", "");
+  setFeedback("The words were shuffled again. Build the sentence once more.", "");
   renderCurrentTask();
 }
 
@@ -2143,7 +2143,7 @@ function restartCurrentTask() {
   state.placements[state.currentTaskIndex] = Array(task.answer.length).fill(null);
   state.completed[state.currentTaskIndex] = false;
   recalculateScore();
-  setFeedback("Тапсырма қайта басталды. Сөздер қайтадан төменге қайтарылды.", "");
+  setFeedback("The task was restarted. The words were moved back down.", "");
   renderCurrentTask();
 }
 
@@ -2203,13 +2203,13 @@ function getCameraElements(featureName = state.activeFeature) {
 function updateCameraButtons() {
   elements.cameraButton.textContent =
     state.camera.streamStarted && state.camera.ownerFeature === "featureOne"
-      ? "Камераны өшіру"
-      : "Камераны Қосу";
+      ? "Turn Camera Off"
+      : "Start Camera";
 
   elements.quizCameraButton.textContent =
     state.camera.streamStarted && state.camera.ownerFeature === "featureFour"
-      ? "Камераны өшіру"
-      : "Камераны Қосу";
+      ? "Turn Camera Off"
+      : "Start Camera";
 }
 
 async function toggleCamera() {
@@ -2222,8 +2222,8 @@ async function toggleCamera() {
     await startCamera();
   } catch (error) {
     console.error(error);
-    setCameraStatus("Камера қосылмады", "status-error");
-    setGestureStatus("Камераға рұқсат беріп, бетті қайта жүктеңіз.", "status-error");
+    setCameraStatus("Camera did not start", "status-error");
+    setGestureStatus("Allow camera access and reload the page.", "status-error");
   }
 }
 
@@ -2278,11 +2278,11 @@ async function startCamera() {
   if (ownerFeature === "featureFour") {
     resetQuizGestureTracking();
     updateQuizDetectedDisplay();
-    setCameraStatus("Камера қосулы", "status-live", ownerFeature);
-    setGestureStatus("1, 2 немесе 3 саусақ көрсетіп, жауабыңызды таңдаңыз.", "status-live", ownerFeature);
+    setCameraStatus("Camera on", "status-live", ownerFeature);
+    setGestureStatus("Show 1, 2, or 3 fingers to choose your answer.", "status-live", ownerFeature);
   } else {
-    setCameraStatus("Камера қосулы", "status-live", ownerFeature);
-    setGestureStatus("Бір қолыңызды көрсетіп, сөзді ұстау үшін қысу қимылын жасаңыз.", "status-live", ownerFeature);
+    setCameraStatus("Camera on", "status-live", ownerFeature);
+    setGestureStatus("Show one hand and pinch to grab a word.", "status-live", ownerFeature);
   }
 
   updateCameraButtons();
@@ -2331,11 +2331,11 @@ function stopCamera() {
   if (ownerFeature === "featureFour") {
     resetQuizGestureTracking();
     updateQuizDetectedDisplay();
-    setCameraStatus("Камера өшірулі", "status-idle", ownerFeature);
-    setGestureStatus("Камераны қосып, 1, 2 немесе 3 саусақ көрсетіңіз", "status-muted", ownerFeature);
+    setCameraStatus("Camera off", "status-idle", ownerFeature);
+    setGestureStatus("Turn on the camera and show 1, 2, or 3 fingers", "status-muted", ownerFeature);
   } else {
-    setCameraStatus("Камера өшірулі", "status-idle", ownerFeature);
-    setGestureStatus("Қимылды тану камера қосылғанда іске қосылады", "status-muted", ownerFeature);
+    setCameraStatus("Camera off", "status-idle", ownerFeature);
+    setGestureStatus("Gesture tracking will start when the camera is on", "status-muted", ownerFeature);
   }
 
   updateCameraButtons();
@@ -2348,7 +2348,7 @@ function drawHandResults(results, ctx, canvas) {
   if (!results.multiHandLandmarks?.length) {
     ctx.restore();
     if (state.gesture.enabled && state.activeFeature === "featureOne") {
-      setGestureStatus("Қол табылмады. Қолыңызды камераға жақындатыңыз.", "status-muted");
+      setGestureStatus("No hand found. Move your hand closer to the camera.", "status-muted");
       elements.cursor.classList.remove("pinching");
     }
     if (state.activeFeature !== "featureOne") {
@@ -2391,12 +2391,12 @@ function handleGesture(results) {
     if (state.activeFeature === "featureFour") {
       resetQuizGestureTracking();
       updateQuizDetectedDisplay();
-      setGestureStatus("Қол табылмады. Қолыңызды камераға анық көрсетіңіз.", "status-muted", "featureFour");
+      setGestureStatus("No hand found. Show your hand clearly to the camera.", "status-muted", "featureFour");
       elements.cursor.classList.add("hidden");
       return;
     }
 
-    setGestureStatus("Қол табылмады. Қолыңызды камераға жақындатыңыз.", "status-muted");
+    setGestureStatus("No hand found. Move your hand closer to the camera.", "status-muted");
     elements.cursor.classList.add("tracking-lost");
     elements.cursor.classList.remove("pinching");
     return;
@@ -2465,17 +2465,17 @@ function handleGesture(results) {
         pointerOffsetY: rect.height / 2,
       });
       moveDragGhost(state.gesture.smoothX, state.gesture.smoothY);
-      setGestureStatus("Қысу қимылы қосылды. Ұяшыққа апарып, саусақты ашыңыз.", "status-live");
+      setGestureStatus("Pinch detected. Move to a slot and open your fingers.", "status-live");
     } else {
-      setGestureStatus("Сөзді ұстау үшін қысу қимылын сөздің үстінде жасаңыз.", "status-muted");
+      setGestureStatus("Pinch over a word to grab it.", "status-muted");
     }
   } else if (!pinching && state.gesture.lastPinch && state.drag) {
     finishDragAt(state.gesture.smoothX, state.gesture.smoothY);
-    setGestureStatus("Сөз қойылды. Келесі сөз үшін қайта қысу қимылын жасаңыз.", "status-live");
+    setGestureStatus("Word placed. Pinch again to grab the next word.", "status-live");
   } else if (pinching && state.drag) {
     moveDragGhost(state.gesture.smoothX, state.gesture.smoothY);
   } else if (!pinching) {
-    setGestureStatus("Сөздің үстіне барып, ұстау үшін қысу қимылын жасаңыз.", "status-live");
+    setGestureStatus("Move over a word and pinch to grab it.", "status-live");
   }
 
   state.gesture.lastPinch = pinching;
@@ -2488,7 +2488,7 @@ function handleQuizGesture(results, landmarks) {
   const now = performance.now();
   if (now < state.quiz.gestureLockedUntil) {
     updateQuizDetectedDisplay();
-    setGestureStatus("Жауап сақталды. Келесі сұраққа дайын болыңыз.", "status-live", "featureFour");
+    setGestureStatus("Answer saved. Get ready for the next question.", "status-live", "featureFour");
     return;
   }
 
@@ -2503,8 +2503,8 @@ function handleQuizGesture(results, landmarks) {
     updateQuizDetectedDisplay();
     setGestureStatus(
       rawFingerCount >= 1 && rawFingerCount <= 3
-        ? `${rawFingerCount} саусақ байқалды. Қолыңызды тік ұстап, қимылды өзгертпеңіз.`
-        : "1, 2 немесе 3 саусақты анық әрі бөлек көрсетіңіз.",
+        ? `${rawFingerCount} finger(s) detected. Keep your hand upright and steady.`
+        : "Show 1, 2, or 3 fingers clearly and separately.",
       rawFingerCount >= 1 && rawFingerCount <= 3 ? "status-live" : "status-muted",
       "featureFour",
     );
@@ -2518,7 +2518,7 @@ function handleQuizGesture(results, landmarks) {
     state.quiz.holdStartedAt = now;
     state.quiz.holdProgress = 0;
     updateQuizDetectedDisplay();
-    setGestureStatus(`${fingerCount} саусақ танылды. Таңдау үшін сәл ұстап тұрыңыз.`, "status-live", "featureFour");
+    setGestureStatus(`${fingerCount} finger(s) recognized. Hold a little longer to choose.`, "status-live", "featureFour");
     return;
   }
 
@@ -2527,11 +2527,11 @@ function handleQuizGesture(results, landmarks) {
 
   if (state.quiz.holdProgress >= 1) {
     selectQuizAnswer(fingerCount - 1, "gesture");
-    setGestureStatus(`${fingerCount}-нұсқа таңдалды.`, "status-live", "featureFour");
+    setGestureStatus(`Option ${fingerCount} selected.`, "status-live", "featureFour");
     return;
   }
 
-  setGestureStatus(`${fingerCount} саусақ танылды. Ұстап тұрыңыз.`, "status-live", "featureFour");
+  setGestureStatus(`${fingerCount} finger(s) recognized. Keep holding.`, "status-live", "featureFour");
 }
 
 function stabilizeQuizFingerCount(count) {
